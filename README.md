@@ -1,4 +1,4 @@
-# gulp-amdcheck
+# gulp-amdcheck [![Build Status](https://travis-ci.org/mehdishojaei/gulp-amdcheck.svg?branch=master)](https://travis-ci.org/mehdishojaei/gulp-amdcheck)
 
 > Finds and removes unused dependencies in AMD modules.
 
