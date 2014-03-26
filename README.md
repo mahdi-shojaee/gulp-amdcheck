@@ -13,7 +13,7 @@ npm install gulp-amdcheck --save-dev
 When an AMD based project grows, number of it's js files grows too and some dependencies of the modules that had been used before, can become useless later. The AMD module loader (e.g. `requirejs`) loads those useless dependencies from network which can increase initial page load time.
 This gulp plugin can detect and remove those useless dependencies without modifying source files.
 
-## Usage
+### Usage
 
 ```javascript
 var amdcheck = require('gulp-amdcheck');
@@ -90,5 +90,5 @@ Default value: true
 
 Removes detected unused dependencies and save the new files.
 
-## Release History
+### Release History
  * 2014-03-27   v0.0.1   Add README file.
