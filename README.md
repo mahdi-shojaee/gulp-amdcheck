@@ -91,4 +91,4 @@ Default value: true
 Removes detected unused dependencies and save the new files.
 
 ### Release History
- * 2014-03-27   v0.0.1   Add README file.
+ * 2014-03-27   v0.0.0   First commit.
