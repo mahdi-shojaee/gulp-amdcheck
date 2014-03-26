@@ -91,4 +91,4 @@ Default value: true
 Removes detected unused dependencies and save the new files.
 
 ### Release History
- * 2014-03-27   v0.0.0   First commit.
+ * 2014-03-27   v0.0.0   First commit of gulp-amdcheck.
