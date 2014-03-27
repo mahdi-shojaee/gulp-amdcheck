@@ -15,7 +15,7 @@ This gulp plugin can detect and remove those useless dependencies without modify
 
 ### Usage
 
-```javascript
+```js
 var amdcheck = require('gulp-amdcheck');
 
 gulp.task('amdcheck', function() {
@@ -25,7 +25,41 @@ gulp.task('amdcheck', function() {
 });
 ```
 
+## example
+
+source.js
+```js
+define('module1', ['p1', 'p2'], function (a, b) {
+  return a;
+});
+
+define('module2', ['p1', 'p2', 'p3'], function (a, b, c) {
+  return b;
+});
+```
+
+optimized-source.js
+```js
+define('module1', ['p1'], function (a) {
+  return a;
+});
+
+define('module2', ['p2'], function (b) {
+  return b;
+});
+```
+
 ### Options
+
+```js
+var amdcheck = require('gulp-amdcheck');
+
+gulp.task('amdcheck', function() {
+  gulp.src('**/*.js')
+    .pipe(amdcheck(options))
+    .pipe(gulp.dest('dist'))
+});
+```
 
 #### excepts
 Type: Array
@@ -41,10 +75,19 @@ An array of strings or RegExps that represent dependency paths that should not t
 
 NOTE: `exceptsPaths` can also be declared before each module definition as a comment of strings of module paths separated by commas. This only applies on the underlying module definition.
 
-``` js
-/* exceptsPaths: view/c */
-define(["view/a", "view/b", "view/c"], function (a, b, c) {
-  b.fetch();
+source.js
+```js
+/* exceptsPaths: p3 */
+define(['p1', 'p2', 'p3'], function (a, b, c) {
+  return b;
+});
+```
+
+optimized-source.js
+```js
+/* exceptsPaths: p3 */
+define(['p2', 'p3'], function (b, c) {
+  return b;
 });
 ```
 
