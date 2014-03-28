@@ -55,9 +55,13 @@ define('module2', ['p2'], function (b) {
 var amdcheck = require('gulp-amdcheck');
 
 gulp.task('amdcheck', function() {
+  var options = {
+    exceptsPaths: ['bootstrap', /^jquery/i]
+  };
+
   gulp.src('**/*.js')
     .pipe(amdcheck(options))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist'));
 });
 ```
 
