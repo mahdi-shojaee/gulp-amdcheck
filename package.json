@@ -1,7 +1,7 @@
 {
   "name": "gulp-amdcheck",
-  "description": "Finds and removes unused dependencies in AMD modules.",
-  "version": "0.0.9",
+  "description": "Finds and removes unused dependencies in AMD modules (Uses AST to find out unused dependencies).",
+  "version": "1.0.0",
   "homepage": "https://github.com/mehdishojaei/gulp-amdcheck",
   "author": "Mehdi Shojaei",
   "contributors": [
@@ -31,7 +31,7 @@
     "test": "mocha"
   },
   "dependencies": {
-    "amdextract": "^1.0.0",
+    "amdextract": "^2.0.0",
     "through2": "^0.4.1",
     "gulp-util": "~2.2.14"
   },

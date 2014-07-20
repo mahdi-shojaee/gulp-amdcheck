@@ -1,6 +1,6 @@
 # gulp-amdcheck [![Build Status](https://travis-ci.org/mehdishojaei/gulp-amdcheck.svg?branch=master)](https://travis-ci.org/mehdishojaei/gulp-amdcheck)
 
-> Finds and removes unused dependencies in AMD modules.
+> Finds and removes unused dependencies in AMD modules (Uses AST to find out unused dependencies).
 
 ## Getting Started
 ```shell
@@ -138,4 +138,5 @@ Default value: true
 Removes detected unused dependencies and save the new files.
 
 ### Release History
+ * 2014-07-20   v1.0.0   Uses AST to find out unused dependencies.
  * 2014-03-27   v0.0.0   First commit of gulp-amdcheck.
