@@ -138,6 +138,6 @@ Default value: true
 Removes detected unused dependencies and save the new files.
 
 ### Release History
- * 2014-08-16   v1.2.0   Entierly use AST.
+ * 2014-08-16   v1.2.0   Entirely use AST.
  * 2014-07-20   v1.0.0   Uses AST to find out unused dependencies.
  * 2014-03-27   v0.0.0   First commit of gulp-amdcheck.
