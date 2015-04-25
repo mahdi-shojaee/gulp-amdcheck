@@ -37,7 +37,6 @@
   },
   "devDependencies": {
     "gulp": "^3.5.6",
-    "event-stream": "^3.1.0",
     "vinyl": "^0.2.3",
     "should": "^3.2.0-beta1",
     "mocha": "~1.18.2"

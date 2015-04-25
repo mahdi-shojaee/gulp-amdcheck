@@ -1,6 +1,5 @@
 var through = require('through2');
 var gutil = require('gulp-util');
-var es = require('event-stream');
 var amdextract = require('amdextract');
 var PluginError = gutil.PluginError;
 
