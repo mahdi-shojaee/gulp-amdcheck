@@ -18,5 +18,23 @@ describe('gulp-amdcheck', function() {
         done();
       });
     });
+
+    it('should fail on unused dependencies', function(done) {
+      var bufferFile = new File({
+        contents: new Buffer('define(["p1"], function(a) {})'),
+        base: __dirname,
+        path: __dirname + '/fixture.js'
+      });
+
+      var stream = amdcheck({ errorOnUnusedDependencies: true });
+
+      stream.once('error', function (err) {
+        err.message.should.equal('The file "fixture.js" contains the unused dependencies ["a"].');
+        done();
+      });
+
+      stream.write(bufferFile);
+      stream.end();
+    });
   });
 });
