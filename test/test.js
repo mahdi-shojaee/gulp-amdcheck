@@ -1,5 +1,5 @@
 var should = require('should');
-var File = require('vinyl');
+var File = require('gulp-util').File;
 var amdcheck = require('..');
 
 describe('gulp-amdcheck', function() {
