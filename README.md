@@ -137,6 +137,12 @@ Default value: true
 
 Removes detected unused dependencies and save the new files.
 
+#### errorOnUnusedDependencies
+Type: boolean
+Default value: false
+
+Throws an error if a file contains any unused dependencies.
+
 ### Release History
  * 2014-08-22   v1.2.5   Fix a bug when there are comments between paths and dependencies.
  * 2014-08-16   v1.2.0   Entirely uses AST.
