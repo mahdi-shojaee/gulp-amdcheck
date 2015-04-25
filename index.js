@@ -6,16 +6,20 @@ var PluginError = gutil.PluginError;
 
 const PLUGIN_NAME = 'gulp-amdcheck';
 
+function isUndefined(object) {
+  return object === undefined;
+}
+
 function gulpAmdCheck(options) {
   options = options || {};
 
-  options.logFilePath = options.logFilePath || true;
-  options.logModuleId = options.logModuleId || false;
-  options.logDependencyPaths = options.logDependencyPaths || false;
-  options.logDependencyNames = options.logDependencyNames || false;
-  options.logUnusedDependencyPaths = options.logUnusedDependencyPaths || true;
-  options.logUnusedDependencyNames = options.logUnusedDependencyNames || false;
-  options.removeUnusedDependencies = options.removeUnusedDependencies || true;
+  options.logFilePath = isUndefined(options.logFilePath) ? true : options.logFilePath;
+  options.logModuleId = isUndefined(options.logModuleId) ? false : options.logModuleId;
+  options.logDependencyPaths = isUndefined(options.logDependencyPaths) ? false : options.logDependencyPaths;
+  options.logDependencyNames = isUndefined(options.logDependencyNames) ? false : options.logDependencyNames;
+  options.logUnusedDependencyPaths = isUndefined(options.logUnusedDependencyPaths) ? true : options.logUnusedDependencyPaths;
+  options.logUnusedDependencyNames = isUndefined(options.logUnusedDependencyNames) ? false : options.logUnusedDependencyNames;
+  options.removeUnusedDependencies = isUndefined(options.removeUnusedDependencies) ? true : options.removeUnusedDependencies;
 
   options.logFilePath = options.logFilePath || options.logDependencyPaths || options.logDependencyNames || options.logUnusedDependencyPaths || options.logUnusedDependencyNames;
 
