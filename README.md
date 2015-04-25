@@ -144,6 +144,7 @@ Default value: false
 Throws an error if a file contains any unused dependencies.
 
 ### Release History
+ * 2015-04-25   v1.3.0   Add a new option (errorOnUnusedDependencies).
  * 2014-08-22   v1.2.5   Fix a bug when there are comments between paths and dependencies.
  * 2014-08-16   v1.2.0   Entirely uses AST.
  * 2014-07-20   v1.0.0   Uses AST to find out unused dependencies.
