@@ -95,12 +95,6 @@ define(['p2', 'p3'], function (b, c) {
 });
 ```
 
-#### logFilePath
-Type: boolean
-Default value: true
-
-Log the file path of the current processing file if this option or one of the options `logDependencyPaths`, `logDependencyNames`, `logUnusedDependencyPaths` or `logUnusedDependencyNames` was true.
-
 #### logModuleId
 Type: boolean
 Default value: false
@@ -144,6 +138,7 @@ Default value: false
 Throws an error if a file contains any unused dependencies.
 
 ### Release History
+ * 2015-04-26   v1.3.1   Fix a bug in logging.
  * 2015-04-25   v1.3.0   Add a new option (errorOnUnusedDependencies).
  * 2014-08-22   v1.2.5   Fix a bug when there are comments between paths and dependencies.
  * 2014-08-16   v1.2.0   Entirely uses AST.
