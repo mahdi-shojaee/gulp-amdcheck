@@ -125,6 +125,12 @@ Default value: false
 
 Logs the list of unused dependencies names of the module.
 
+#### logNumberOfModules
+Type: boolean
+Default value: false
+
+Logs the number of detected modules.
+
 #### removeUnusedDependencies
 Type: boolean
 Default value: true
@@ -138,6 +144,7 @@ Default value: false
 Throws an error if a file contains any unused dependencies.
 
 ### Release History
+ * 2015-04-27   v1.3.2   Add a new option (logNumberOfModules).
  * 2015-04-26   v1.3.1   Fix a bug in logging.
  * 2015-04-25   v1.3.0   Add a new option (errorOnUnusedDependencies).
  * 2014-08-22   v1.2.5   Fix a bug when there are comments between paths and dependencies.

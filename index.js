@@ -45,6 +45,7 @@ function gulpAmdCheck(options) {
   options.logDependencyNames = isUndefined(options.logDependencyNames) ? false : options.logDependencyNames;
   options.logUnusedDependencyPaths = isUndefined(options.logUnusedDependencyPaths) ? true : options.logUnusedDependencyPaths;
   options.logUnusedDependencyNames = isUndefined(options.logUnusedDependencyNames) ? false : options.logUnusedDependencyNames;
+  options.logNumberOfModules = isUndefined(options.logNumberOfModules) ? false : options.logNumberOfModules;
   options.removeUnusedDependencies = isUndefined(options.removeUnusedDependencies) ? true : options.removeUnusedDependencies;
   options.errorOnUnusedDependencies = isUndefined(options.errorOnUnusedDependencies) ? false : options.errorOnUnusedDependencies;
 
@@ -63,7 +64,9 @@ function gulpAmdCheck(options) {
       var output = amdextract.parse(file.contents.toString(), options),
           results = output.results;
 
-      gutil.log('(' + (results.length ? results.length : 'no') + ' module' + (results.length > 1 ? 's' : '') + ')');
+      if (options.logNumberOfModules) {
+        gutil.log('(' + (results.length ? results.length : 'no') + ' module' + (results.length > 1 ? 's' : '') + ')');
+      }
 
       results.forEach(function (result) {
         var unusedDependencies = result.unusedDependencies;
