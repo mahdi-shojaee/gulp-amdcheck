@@ -17,12 +17,7 @@
   "bugs": {
     "url": "https://github.com/mehdishojaei/gulp-amdcheck/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/mehdishojaei/gulp-amdcheck/blob/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "main": "index.js",
   "files": ["index.js"],
   "engines": {
