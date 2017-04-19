@@ -1,4 +1,4 @@
-# gulp-amdcheck [![Build Status](https://travis-ci.org/mehdishojaei/gulp-amdcheck.svg?branch=master)](https://travis-ci.org/mehdishojaei/gulp-amdcheck)
+# gulp-amdcheck [![Build Status](https://travis-ci.org/mehdishojaei/gulp-amdcheck.svg?branch=master)](https://travis-ci.org/mehdishojaei/gulp-amdcheck) [![Known Vulnerabilities](https://snyk.io/test/github/mehdishojaei/gulp-amdcheck/badge.svg)](https://snyk.io/test/github/mehdishojaei/gulp-amdcheck)
 
 > Uses AST to find and remove unused dependencies in AMD modules.
 
